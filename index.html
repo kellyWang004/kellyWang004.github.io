@@ -12,11 +12,12 @@
 		#boxOuter{
 			flex-flow: column;
 			background-color: rgb(248,240,221);
+			padding-bottom: 200px;
 		}
 		
 		
 		#head{
-			background-image: url(/img1.png);
+			background-image: url(img1.png);
 			height: 100px;
 			width: 100%;
 			background-position: center;
@@ -53,17 +54,19 @@
 		}
 		
 		.requestTitle{
-			font-size: 21px;
+			font-size: 18px;
 			font-weight: 600;
 			color: #006eff;
 			cursor: pointer;
+			margin-top: 10px;
 		}
 		.requestContent{
 			display: none;
 			flex-flow: column nowrap; 
+			margin-top: 10px;
 		}
 		.requestContent>img{
-			width: 60%;
+			width: 40%;
 		}
 		.requestDescription{
 			color: red;
@@ -82,7 +85,8 @@
 			
 			<div id="warningBox">
 				<div id="warning">
-				警告：在使用星星扩展mod时，有任何问题都优先在此网页中寻找答案，实在没办法解决再去群友，最后的最后，严格按照要求找作者也就是我本人提问，我不是骑砍官方也不是内部人员，没有义务给你们每个人解决问题。我只能在我有时间的条件下给你们按照正确方式提出的问题做出解答，凡是不按照下面要求找我提问的人，一律不回复。
+				<!-- 注意：在使用星星扩展mod时，有任何问题都优先在此网页中寻找答案，实在没办法解决再去群友，最后的最后，严格按照要求找作者也就是我本人提问，我不是骑砍官方也不是内部人员，没有义务给你们每个人解决问题。我只能在我有时间的条件下给你们按照正确方式提出的问题做出解答，凡是不按照下面要求找我提问的人，一律不回复。 -->
+				注意：使用电脑打开本页面浏览效果会更好。（本文档最后编辑时间：4月30日晚，编辑者骑砍中文站kellywang。对应星星扩展版本为3.2.0）
 				</div>
 			</div>
 			
@@ -90,7 +94,7 @@
 			
 			<div id="bodyBox">
 				<div id="requestClass01">
-					<h1>一、mod安装系列问题:</h3>
+					<h2>一、mod安装系列问题:（双击蓝色字即可参开详情，再次单击即可收起详情。）</h2>
 					
 					
 					<div class="requestTitle" id="request01">
@@ -111,11 +115,6 @@
 						</div>
 					</div>
 					
-					
-					
-					
-					
-					
 					<div class="requestTitle" id="request02">
 						2、新建战役或者沙盒模式报错
 					</div>
@@ -130,9 +129,429 @@
 						</div>
 					</div>
 					
+					<div class="requestTitle" id="request03">
+						3、在mod安装方面的其他问题
+					</div>
+					<div class="requestContent" style="" id="request03C">
+						<span class="requestDescription">问题描述：</span>
+						 如果1、2两个问题都没有帮助你解决问题，那么你就大胆的在Q群里提问，中文站和mod文件里面都有群号。注意提问之前请确保你已经仔细阅读上面的两个问题并且按照解决方案还是没有成功进入游戏。<br />
+						 如果你觉得这个问题会很难解决，并且一定与星星扩展mod有关，那么请给我发消息，我会帮你解决。但是如果你安装了其他mod出现问题还来找我，那就别怪我不理你了。
+						<div class="requestSolution">解决方案：</div>
+						<div id="">
+							无
+						</div>
+					</div>
 					
 					
 					
+					
+					<hr />
+					<h2>二、正常游戏中报错的系列问题:</h2>
+					
+					<div class="requestTitle" id="request04">
+						1、你不止加了星星扩展一个mod且出现报错。
+					</div>
+					<div class="requestContent" style="" id="request04C">
+						<span class="requestDescription">问题描述：</span>
+						<div class="">
+							如果你除了四前置mod和星星扩展之外，还加了其他mod，请按照这个问题的解决方案来解决。
+						</div>
+						<img src="requset03.png" >
+						<div class="requestSolution">解决方案：</div>
+						<div id="">
+							①首先你可以尝试点击崩溃报告中的“Attempt to continue”或者“close report”，如果还出现就一直点，某一些错误通过点击这个也能解决。<br />
+							②然后尝试只加星星扩展mod，但是注意不要再中途增减mod，这很容易造成坏档或者报错！！增减mod最好开新档。<br />
+							③重新进入游戏看是否在同一时间、同一地点或者同一事件中报错，很多时候不会出现这种情况，如果出现，请看下面的说明。
+							最后，我想说的是，加了多mod这种情况我不会帮你解决，你加了多个mod，我不能判断是不是星星扩展的问题。如果上述方法不能帮你解决，请自己按照第三点“常见报错分析”解决。<br />
+							如果你自己解决不了，而且真的特别特别需要解决，或者真的觉得这一定是星星扩展的问题，请将保存崩溃报告(保存方法请看下面的问题2)单独发给我并详细描述报错的时间与游戏中的各种状态等。对于那种直接问“我游戏报错了怎么办？”而不说清楚报错详情的我会直接踢出群并拉黑。<br />
+							当然问我之前最好是先问群友。<br />
+						</div>
+					</div>
+					
+					<div class="requestTitle" id="request05">
+						2、你只加了一个星星扩展并在游戏中报错了（有崩溃报错的弹窗）。
+					</div>
+					<div class="requestContent" style="" id="request05C">
+						<span class="requestDescription">问题描述：</span>
+						<div class="">
+							如果你只加了四前置mod和星星扩展，在游戏中报错了并且出现下图类似的弹窗报告，请尝试下面的解决方案。<br />
+							下面的保存崩溃报告的方法：
+						</div>
+						<img src="requset04.png" >
+						<div class="requestSolution">解决方案：</div>
+						<div id="">
+							①重新进入游戏看是否在同一时间、同一地点或者同一事件中报错，很多时候不会出现这种情况，如果出现，请看下面的解决方案。<br />
+							②根据第三部分“常见报错分析”尝试自行解决。<br />
+							③如果解决不了就问群友或者保存崩溃报告发给我，并且详述报错的时间和游戏中的事件等，比如在某个城镇报错，比如和某个人对话就报错，再比如和一个部队开战就报错等等，必须说清楚情况！！<br />
+						</div>
+					</div>
+					
+					
+					
+					<div class="requestTitle" id="request06">
+						3、你只加了一个星星扩展并在游戏中报错了（无崩溃报错的弹窗）。
+					</div>
+					<div class="requestContent" style="" id="request06C">
+						<span class="requestDescription">问题描述：</span>
+						<div class="">
+							如果你只加了一个星星扩展并在游戏中报错了，且没有弹出崩溃报告，请尝试下面的解决方案<br />
+							没有崩溃报告的弹窗是这样的：
+						</div>
+						<img src="requset05.png" >
+						<div class="requestSolution">解决方案：</div>
+						<div id="">
+							①重新进入游戏看是否在同一时间、同一地点或者同一事件中报错，很多时候不会出现这种情况，如果出现，请看下面的解决方案。<br />
+							②如果总是出现在同一个地方报错，请将具体情况反馈给我，注意一定要描述清楚。比如在某个城镇报错，比如和某个人对话就报错，再比如和一个部队开战就报错等等，必须说清楚情况！！<br />
+						</div>
+					</div>
+					
+					
+					
+					
+					<hr />
+					<h2>三、常见报错分析:</h2>
+					
+					<div class="requestTitle" id="request07">
+						1、SandBox.Veiw.Map。
+					</div>
+					<div class="requestContent" style="" id="request07C">
+						<span class="requestDescription">问题描述：</span>
+						<div class="">
+							当你点开崩溃报告中的“Exception”或者“CallStacks”发现了SandBox.Veiw.Map的字样，那么99%就是地图问题。<br />
+						</div>
+						<img src="requset06.png" >
+						<div class="requestSolution">解决方案：</div>
+						<div id="">
+							①按照要求重新替换地图。如果你之前复制错地方了，请在steam里面验证游戏完整性或者重装游戏后再次按要求替换mod的地图文件。<br />
+						</div>
+					</div>
+					
+					<div class="requestTitle" id="request08">
+						2、Index was outside the bounds of the array。
+					</div>
+					<div class="requestContent" style="" id="request08C">
+						<span class="requestDescription">问题描述：</span>
+						<div class="">
+							当你点开崩溃报告中的“Exception”或者“CallStacks”发现了Index was outside the bounds of the arrayp的字样，这是数组索引越界的报错，这个问题很常见，很多原因都可能导致这个报错。<br />
+						</div>
+						<img src="requset07.jpg" >
+						<div class="requestSolution">解决方案：</div>
+						<div id="">
+							①尝试重启之后不要做和之前相同的事件可能可以解决。<br />
+						</div>
+					</div>
+					
+					<div class="requestTitle" id="request09">
+						3、0bject reference not set to an instance of an object。
+					</div>
+					<div class="requestContent" style="" id="request09C">
+						<span class="requestDescription">问题描述：</span>
+						<div class="">
+							当你点开崩溃报告中的“Exception”或者“CallStacks”发现了0bject reference not set to an instance of an object的字样，这是个错误有多种说法如：调用的对象为空、调用对象未实例化、空指针等，这个问题也很常见，很多原因都可能导致这个报错。<br />
+						</div>
+						<img src="requset08.png" >
+						<div class="requestSolution">解决方案：</div>
+						<div id="">
+							①尝试重启之后不要做和之前相同的事件可能可以解决。<br />
+						</div>
+					</div>
+					
+					<hr />
+					<h2>四、星星扩展mod中的bug:</h2>
+					<div class="requestTitle" id="request10">
+						1、地图bug。
+					</div>
+					<div class="requestContent" style="" id="request10C">
+						<span class="requestDescription">问题描述：</span>
+						<div class="">
+							所有的地图bug我都清楚，你不用再给我单独报告，地图的bug很多并不影响正常游戏，而编辑地图是一件很恼火的事情，如果你一直给我报告地图bug会导致我出现崩溃的情况。所以地图bug能忍就忍，我不会经常去修地图bug，我需要把时间给其他更重要的问题。<br />
+						</div>
+						<div class="requestSolution">解决方案：</div>
+						<div id="">
+							无。<br />
+						</div>
+					</div>
+					
+					<div class="requestTitle" id="request11">
+						2、剧情bug。
+					</div>
+					<div class="requestContent" style="" id="request11C">
+						<span class="requestDescription">问题描述：</span>
+						<div class="">
+							当前的剧情bug几乎不会影响正常招募12个特殊英雄，如果你发现某处的剧情有严重漏洞导致某个英雄无法招募，请一定报告给我。但是！！但是一定是真正的漏洞而不是你自己没搞清楚招募的方法。<br />
+						</div>
+						<div class="requestSolution">解决方案：</div>
+						<div id="">
+							这个问题几乎不会出现，如果出现，请敲敲自己的脑瓜！！可恶！<br />
+						</div>
+					</div>
+					
+					
+					<div class="requestTitle" id="request12">
+						3、功能bug。
+					</div>
+					<div class="requestContent" style="" id="request12C">
+						<span class="requestDescription">问题描述：</span>
+						<div class="">
+							功能bug是比较容易出现的，我只能说我尽力去修复那些功能上的bug，但是我真的想说，这类功能性的代码都是作者自己的一点点摸索的，官方根本就没有可以参考的文档，有时候我测试一个功能要测试好几天，而且最后还不一定能成功，所以如果你发现非常重要的功能性的漏洞，请报告给我，如果不是特别影响游戏的正常玩的话，请忍一忍，因为这类bug要么我已经知道，要么是没办法修或者很难修的，所以请节约一下作者的精力，这个对持续更新mod很重要。<br />
+						</div>
+						<div class="requestSolution">解决方案：</div>
+						<div id="">
+							无。<br />
+						</div>
+					</div>
+					
+					
+					
+					<div class="requestTitle" id="request13">
+						4、设定bug。
+					</div>
+					<div class="requestContent" style="" id="request13C">
+						<span class="requestDescription">问题描述：</span>
+						<div class="">
+							这类bug是指：<br />
+							①兵种类型设置错误，如弓箭手设置成了步兵；。<br />
+							②兵种强度严重不合理，某个兵种强度严重不符合实情，这种情况大概率是bug而不是我故意那么设置的。<br /> 
+							③装备属性严重不合理，同上。少数是特殊设定，如果不清楚建议问群友或者看本页面的其他攻略。<br />
+							④领主获得第纳尔或经验过多而影响正常游戏，可以问群友或者报告给我。<br />
+							......<br />
+							报告这类型的错误前请一定确认是bug而不是有意设定的，想确认是否是有意设定请先问群友。
+						</div>
+						<div class="requestSolution">解决方案：</div>
+						<div id="">
+							无。<br />
+						</div>
+					</div>
+					
+					
+					
+					<hr />
+					<h2>五、星星扩展mod部分攻略（实时更新中）:</h2>
+					<div class="requestTitle" id="request14">
+						1、女侠-风休住。
+					</div>
+					<div class="requestContent" style="" id="request14C">
+						<span class="requestDescription">简介：</span>
+						<div class="">
+							曾是拉盖娅的一个女兵。玩家获得的第一个英雄，战力大概能单挑60劫匪。<br />
+							技能1、给玩家加血（每局的加血触发的最低血量是取10-30的随机数，比如如果随机数是10，则本局血量如果在在5-10之间就会给玩家加血。）。被动技能<br />
+							技能2、招募遇到的劫匪（要求数量比玩家部队士兵数量要少才能够直接招募）。主动技能<br />
+							技能3、每三天招募“女侠”这种士兵自动入队。可与她对话关闭此功能。<br />
+							装备特性：斗笠不能更换。<br />
+						</div>
+						<div class="requestSolution">招募：</div>
+						<div id="">
+							去帝国酒馆找她对话，前四句对话完毕之后再此点击即可。时间到了之后再去找她即可招募入队。一定要去酒馆找她，不要在外面的部队找她。她任何时候都会出现在酒馆。另外，酒馆有很多新NPC，特别是波罗斯，你最好多看看。<br />
+						</div>
+					</div>
+					
+					<div class="requestTitle" id="request15">
+						2、果农-信无书。
+					</div>
+					<div class="requestContent" style="" id="request15C">
+						<span class="requestDescription">简介：</span>
+						<div class="">
+							西帝国的一个农民，具有非凡的军事才能，玩家前期能够获得的一个英雄。<br />
+							技能1、自动寻找食物（游戏中每30小时寻找一次，寻找的食物为新添加的各类食物）。被动技能<br />
+							技能2、遭遇站中如果我方处于弱势能够有机会不损失士兵下撤退。主动技能<br />
+							技能3、能够将主部队15范围内的强盗类型部队增加人数。增加的多少为：(30~300)*部队士兵种类数，十天柯使用一次。主动技能<br />
+							技能4、防止敌方部队撤退(4月29日更新的有小bug)。主动技能<br />
+							装备特性：无。<br />
+						</div>
+						<div class="requestSolution">招募：</div>
+						<div id="">
+							找女侠对话获取线索，然后去村中找他，按要求执行即可。<br />
+						</div>
+					</div>
+					
+					<div class="requestTitle" id="request16">
+						3、医师-雨亦奇。
+					</div>
+					<div class="requestContent" style="" id="request16C">
+						<span class="requestDescription">简介：</span>
+						<div class="">
+							阿耳戈隆的一位医生，心地善良，经常为百姓和士兵治病，但为人低调。<br />
+							技能1、治疗玩家和同伴，治疗的血量随着治疗次数增加而增加，治疗需要消耗纱布和药物。主动技能<br />
+							技能2、需要送她书本才能够快速提升她的医术技能。<br />
+							装备特性：无。<br />
+						</div>
+						<div class="requestSolution">招募：</div>
+						<div id="">
+							找女侠对话获取线索，然后去城中找他，按要求执行即可。（注意：可能不止一个长得像她的人。），纱布和药物在每个城镇中的酒馆里面可找药店老板购买。<br />
+						</div>
+					</div>
+					
+					<div class="requestTitle" id="request17">
+						4、公主-索菲娅。
+					</div>
+					<div class="requestContent" style="" id="request17C">
+						<span class="requestDescription">简介：</span>
+						<div class="">
+							瓦兰迪亚一个城中的公主，据说已经死了一年多了，这会是真的吗？<br />
+							技能1、加快俘虏招募。注意这会消耗额外的谷物，请确保队伍里面有足够的谷物（大于俘虏数量）才能够有效的加快俘虏招募速度。被动技能<br />
+							技能2、复活一个特殊NPC。主动技能<br />
+							技能3、和顾成单独再一个部队时能够招募亡灵士兵。被动技能<br />
+							装备特性：斗篷不能更换。<br />
+						</div>
+						<div class="requestSolution">招募：</div>
+						<div id="">
+							找信无书对话获取线索，城中百姓一共有5中不同的回答，守卫、男镇民、女镇民、小孩、乞丐。另外“仲春三五日”是指春天15日。因为游戏中春天只有一个月，所以仲春也就是指春天这个月。三五日的话，如果你知道年方二八是指16岁，那为什么会怀疑三五日不是指15日呢？因为从前面的对话能够明显看出是以古汉语的形式来说的，那么这里也需要用古汉语的形式来推测。<br />
+						</div>
+					</div>
+					
+					
+					
+					<div class="requestTitle" id="request18">
+						5、匠神-赫淮斯托斯。
+					</div>
+					<div class="requestContent" style="" id="request18C">
+						<span class="requestDescription">简介：</span>
+						<div class="">
+							斯特吉亚的一位铁匠，斯特吉亚士兵使用的许多强力武器均出自于他之手。<br />
+							技能1、提升部队里面的金属锭等级，每天每个类型限制一个，只有匠神在部队才会生效。被动技能<br />
+							技能2、匠神之锤：其他英雄和玩家拿着匠神之锤会自动将血量降低为1。<br />
+							装备特性：匠神之锤换了对他自己没影响。<br />
+						</div>
+						<div class="requestSolution">招募：</div>
+						<div id="">
+							找军师对话获取线索。最后给钱的数量不同除了增加的魅力值不同没有其他任何区别。<br />
+						</div>
+					</div>
+					
+					<div class="requestTitle" id="request19">
+						6、马背少年-原荣。
+					</div>
+					<div class="requestContent" style="" id="request19C">
+						<span class="requestDescription">简介：</span>
+						<div class="">
+							库赛特一个为做马匹生意的老板打工的少年，其实他也早就厌烦了他的工作。<br />
+							技能1、每隔一段时间随机找到马匹加入玩家的背包。马匹中不会包括赤兔和伯乐之魂。被动技能<br />
+							技能2、战场唤马：能将一个马快速传送到玩家身边。主动技能<br />
+							装备特性：他的马不能换掉。<br />
+						</div>
+						<div class="requestSolution">招募：</div>
+						<div id="">
+							找医生对话获取线索。找到酒馆中的“妇女”对话，找原野时你应该相信村民索所说的话。找原荣时可以在某一个城蹲点，随机到这个城的时候在城中马贩的旁边能找到他。注意有的城没马贩，还有注意他提供的小女孩的线索。<br />
+						</div>
+					</div>
+					
+					
+					<div class="requestTitle" id="request20">
+						7、阳光少女-秦山月。
+					</div>
+					<div class="requestContent" style="" id="request20C">
+						<span class="requestDescription">简介：</span>
+						<div class="">
+							阿塞莱一个城中的酒馆老板的义女，身世不得而知。<br />
+							技能1、帮助其他特殊英雄。主动技能<br />
+							技能2、超过18岁不会再长大。被动技能<br />
+							装备特性：她的弩不能换掉。<br />
+						</div>
+						<div class="requestSolution">招募：</div>
+						<div id="">
+							找到她后按照提示即可。注意看对话内容！！<br />
+						</div>
+					</div>
+					
+					
+					
+					<div class="requestTitle" id="request21">
+						8、舞女-柯凌。
+					</div>
+					<div class="requestContent" style="" id="request21C">
+						<span class="requestDescription">简介：</span>
+						<div class="">
+							瓦兰迪亚酒馆中的一个舞女<br />
+							技能1、制作花瓣。被动技能<br />
+							技能2、招募花仙子。被动技能<br />
+							技能3、送给男领主＋50好感。主动技能<br />
+							技能4、玉玉特性：玉玉低于80%可通过小月给她送花。大于80%不能再被送花。玉玉值春每天+1，夏每天+2，秋每天-1，冬每天-2。<br />
+							装备特性：她头上的花瓣不能换掉。<br />
+						</div>
+						<div class="requestSolution">招募：</div>
+						<div id="">
+							根据公主提示即可。<br />
+						</div>
+					</div>
+					
+					<div class="requestTitle" id="request22">
+						9、竞技大师-布恩。
+					</div>
+					<div class="requestContent" style="" id="request22C">
+						<span class="requestDescription">简介：</span>
+						<div class="">
+							一个巴旦尼亚的竞技场主，但同时也是一位剑术高手，并且人脉广泛。<br />
+							技能1、招募贵族兵，招募花费随着招募次数的增加而逐渐减少。主动技能<br />
+							技能2、提升士兵经验，需要送特定的书籍才能提升增加经验的数量。被动技能<br />
+							技能3、和赛特协同作战。主动技能<br />
+							装备特性：他的双手剑不能更换。<br />
+						</div>
+						<div class="requestSolution">招募：</div>
+						<div id="">
+							根据匠神提示即可。要打的藏身处为10处，侦查技能高更容易发现藏身处。<br />
+						</div>
+					</div>
+					
+					
+					
+					<div class="requestTitle" id="request23">
+						10、强盗首领-赛特。
+					</div>
+					<div class="requestContent" style="" id="request23C">
+						<span class="requestDescription">简介：</span>
+						<div class="">
+							阿塞莱南部沙漠中的一个强盗首领，是竞技大师的旧相识。<br />
+							技能1、单独带队时招募哈拉米和阿蒙神进入队伍。商队也有效。被动技能<br />
+							技能2、赛特行刑斧，这把斧头玩家拿着且不骑马时有特殊效果。被动技能<br />
+							技能3、赛特战甲：赛特的神装，能在星星商人处买到，有了它的赛特将免疫近战。被动技能<br />
+							技能4、和竞技大师布恩协同作战，前提是穿了赛特战甲且都没骑马。被动技能<br />
+							装备特性：他的双手斧不能更换。赛特战甲除了他之外，其他人穿着没效果。<br />
+						</div>
+						<div class="requestSolution">招募：</div>
+						<div id="">
+							根据竞技大师布恩提示即可。在阿塞莱南部沙漠你会发现不一样的强盗，击败他们！<br />
+						</div>
+					</div>
+					
+					
+					
+					<div class="requestTitle" id="request24">
+						11、铁血总督-顾成。
+					</div>
+					<div class="requestContent" style="" id="request24C">
+						<span class="requestDescription">简介：</span>
+						<div class="">
+							西帝国的一位将军，具有非凡的管理才能。<br />
+							技能1、督管城镇时每周提升民兵，并且提升民兵上限到3000，每周增加粮食和治安。被动技能<br />
+							技能2、单独带队时可将公主加入他的队伍，此二人同时带队会有特殊效果（队伍名字会不一样，队伍每天增加两个亡灵士兵）。被动技能<br />
+							装备特性：无。<br />
+						</div>
+						<div class="requestSolution">招募：</div>
+						<div id="">
+							找他本人对话根据提示即可。<br />
+						</div>
+					</div>
+					
+					
+					
+					
+					<div class="requestTitle" id="request25">
+						12、时光使者-茱莉亚。
+					</div>
+					<div class="requestContent" style="" id="request25C">
+						<span class="requestDescription">简介：</span>
+						<div class="">
+							时光之城酒馆中一个身穿奇装异服的少女，没人知道她来自哪里，或许这个城镇的名称也与她有关。<br />
+							技能1、咖啡，用于降低英雄的年龄，副作用是增加茱莉亚自身的年龄，比例为5:1。主动技能<br />
+							技能2、城镇之间传送。主动技能<br />
+							技能3、统计玩家参加过战役的数量、击杀人数、最常用的武器等。被动技能，从开档就已经在计算了。<br />
+							装备特性：无。<br />
+						</div>
+						<div class="requestSolution">招募：</div>
+						<div id="">
+							找他本人对话根据提示即可。<br />
+						</div>
+					</div>
 					
 					
 				</div>
