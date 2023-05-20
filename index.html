@@ -19,37 +19,75 @@
 
 		#head {
 			background-image: url(img1.png);
-			height: 100px;
+			height: 130px;
 			width: 100%;
 			background-position: center;
-			flex-flow: row nowrap;
-			justify-content: center;
 			color: #ffffff;
 			font-size: 1.3rem;
 		}
 
-		#head>h1 {
-			align-items: center;
-			text-align: center;
+		#logoText {
 			line-height: 100px;
+			color: #aaff7f;
+			position: relative;
+			top: -155px;
+			left: 95px;
+			width: 200px;
+			font-size: 2.5rem;
+		}
+
+		#logoImg {
+			width: 100px;
+			height: auto;
+			margin-top: 50px;
 		}
 
 
 
 
-		#warningBox {
-			margin: 2px 5%;
+		#navBox {
+			height: 40px;
+			background-color: #ffffff;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-around;
 		}
 
-		#warning {
-			color: red;
+		.navItemBox {
+			width: 150px;
+			height: inherit;
+			line-height: 40px;
+			text-align: center;
 			font-size: 1.2rem;
+			cursor: default;
 		}
+
+		#navBox .navItemBox:first-child {
+			margin-left: 60px;
+		}
+
+		#navBox .navItemBox:last-child {
+			margin-right: 60px;
+		}
+
+		.navItemBox:hover {
+			background-color: #aaaaff;
+		}
+
+
+
+
+
+
+
+
+
+
 
 
 
 		#bodyBox {
-			border-top: #4c4c4c solid 3px;
+			border-top: #4c4c4c solid 1px;
 			flex-flow: column nowrap;
 		}
 
@@ -57,16 +95,34 @@
 			margin: auto 5%;
 		}
 
+		.contentItem {
+			display: none;
+		}
+
+
+
+
+
+
+
+
+
+
+		.contentBigText{
+			font-size: 1.1rem;
+			margin-top: 30px;
+			margin-left: 20px;
+		}
+
 		.requestTitle {
 			font-size: 18px;
 			font-weight: 600;
-			color: #006eff;
+			color: #2b9ad1;
 			cursor: pointer;
 			margin-top: 10px;
 		}
 
 		.requestContent {
-			display: none;
 			flex-flow: column nowrap;
 			margin-top: 10px;
 		}
@@ -76,43 +132,69 @@
 		}
 
 		.requestDescription {
-			color: red;
+			color: #ff6633;
 			font-weight: 600;
 		}
 
 		.requestSolution {
-			color: green;
+			color:  #0ae53d;
 			font-weight: 600;
+		}
+		.description{
+			margin-left: 20px;
 		}
 	</style>
 	<body>
 		<div id="boxOuter">
 			<div id="head">
-				<h1>星星扩展mod自助问答</h1>
+				<img id="logoImg" alt="logo" src="star2little.png">
+				<div id="logoText">星星扩展</div>
 			</div>
 
-			<div id="warningBox">
-				<div id="warning">
-					<!-- 注意：在使用星星扩展mod时，有任何问题都优先在此网页中寻找答案，实在没办法解决再去群友，最后的最后，严格按照要求找作者也就是我本人提问，我不是骑砍官方也不是内部人员，没有义务给你们每个人解决问题。我只能在我有时间的条件下给你们按照正确方式提出的问题做出解答，凡是不按照下面要求找我提问的人，一律不回复。 -->
-					注意：第一次打开较慢，图片未显示请刷新，建议使用电脑打开本页面。（本文档最后编辑时间：4月30日晚，编辑者骑砍中文站kellywang。对应星星扩展版本为3.2.0）<br />
-					警告：不仔细看这个页面，还去群里一直乱问的，直接踢出群聊并拉黑！！<br />
-					找作者提问的方法：如果是报错问题，必须保存崩溃报告发给作者（群主），不能发截图，发了崩溃报告之后详述报错详情。如果没有崩溃报告，就具体描述报错过程。否则一律不回复。
+			<div id="navBox">
+				<div id="navItem01" class="navItemBox">
+					MOD安装问题
+				</div>
+				<div id="navItem02" class="navItemBox">
+					MOD报错问题
+				</div>
+				<div id="navItem03" class="navItemBox">
+					MOD攻略
+				</div>
+				<div id="navItem04" class="navItemBox">
+					更新日志
+				</div>
+				<div id="navItem05" class="navItemBox">
+					下载
+				</div>
+				<div id="navItem06" class="navItemBox">
+					支持作者
 				</div>
 			</div>
 
 
 
+
+			<!-- 			<div id="warningBox">
+				<div id="warning">
+					注意：第一次打开较慢，图片未显示请刷新，建议使用电脑打开本页面。（本文档最后编辑时间：4月30日晚，编辑者骑砍中文站kellywang。对应星星扩展版本为3.2.0）<br />
+					警告：不仔细看这个页面，还去群里一直乱问的，直接踢出群聊并拉黑！！<br />
+					找作者提问的方法：如果是报错问题，必须保存崩溃报告发给作者（群主），不能发截图，发了崩溃报告之后详述报错详情。如果没有崩溃报告，就具体描述报错过程。否则一律不回复。
+				</div>
+			</div> -->
+
+
+
 			<div id="bodyBox">
-				<div id="requestClass01">
-					<h2>〇、纯萌新看这里（第一次玩mod）（双击蓝色字即可展开详情，再次单击即可收起详情。）</h2>
+				<div id="Content01" class="contentItem">
+					<h2>一、纯萌新看这里（第一次玩mod）</h2>
 					<div class="requestTitle" id="request26">
 						1、我第一次用电脑
 					</div>
 					<div class="requestContent" style="" id="request26C">
 						<span class="requestDescription">问题描述：</span>
 						<div class="">
-							首先欢迎你进入电脑的领域。<br />
-							其次，请你先熟悉一下电脑的基本操作，如果你能看到这里，说明你已经掌握了一些基本的电脑知识，起码会进入一个网站。<br />
+							请你先熟悉一下电脑的基本操作，如果你能看到这里，说明你已经掌握了一些基本的电脑知识，起码会进入一个网站。<br />
 							然后，请看下面的问题。<br />
 						</div>
 						<div class="requestSolution">解决方案：</div>
@@ -149,31 +231,19 @@
 						<div class="requestSolution">解决方案：</div>
 						<div id="">
 							下面将详细讲解mod的安装过程，如果你是萌新，请务必认真看。<br />
-							①你从百度云下载所有文件之后，在文件夹里找到“主地图文件”，右键将其解压，将里面的名为“Main_map”的文件夹复制，然后找到这个路径<i
+							①首先点击<a
+								href="https://bbs.mountblade.com.cn/download_45.html">中文站四前置安装教程</a>，先安装四前置mod再进行下面的操作。<br />
+							②你从百度云下载所有文件之后，在文件夹里找到“主地图文件”，右键将其解压，将里面的名为“Main_map”的文件夹复制，然后找到这个路径<i
 								style="color: red;">\steam\steamapps\common\Mount&BladeIIBannerlord\Modules\SandBox\SceneObj</i>下的“Main_map”文件夹，将其删掉，然后右键点击粘贴，将刚才复制的“Main_map”文件夹粘贴进去就行了；<br />
-							②找到XXexpand3.7z这个压缩包，右键解压，然后将XXexpand3整体复制到这个路径下<i
+							③找到XXexpand3.7z这个压缩包，右键解压，然后将XXexpand3整体复制到这个路径下<i
 								style="color: red;">\steam\steamapps\common\Mount&BladeIIBannerlord\Modules</i><br />
-							③点击启动游戏，在mod勾选界面勾选四前置和XXexpand3.2.0并启动游戏即可，启动之后有其他弹窗就点“confirm”或者“是”。<br />
+							④点击启动游戏，在mod勾选界面勾选四前置和XXexpand3.2.0并启动游戏即可，启动之后有其他弹窗就点“confirm”或者“是”。<br />
 						</div>
 					</div>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-					<h2>一、mod安装系列问题:</h2>
+					<h2>二、mod安装系列问题:</h2>
 					<div class="requestTitle" id="request01">
 						1、进不去游戏
 					</div>
@@ -222,10 +292,24 @@
 					</div>
 
 
+				</div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+				<div id="Content02" class="contentItem">
 					<hr />
-					<h2>二、正常游戏中报错的系列问题:</h2>
+					<h2>一、正常游戏中报错的系列问题:</h2>
 
 					<div class="requestTitle" id="request04">
 						1、你不止加了星星扩展一个mod且出现报错。
@@ -285,7 +369,7 @@
 					</div>
 
 					<hr />
-					<h2>三、常见报错分析:</h2>
+					<h2>二、常见报错分析:（只是参考，解决方案不一定可行，尝试后还是不行的话请查看上面的其他解决方案。）</h2>
 
 					<div class="requestTitle" id="request07">
 						1、SandBox.Veiw.Map。
@@ -335,7 +419,7 @@
 					</div>
 
 					<hr />
-					<h2>四、星星扩展mod中的bug:</h2>
+					<h2>三、星星扩展mod中的bug:</h2>
 					<div class="requestTitle" id="request10">
 						1、地图bug。
 					</div>
@@ -400,25 +484,26 @@
 							无。<br />
 						</div>
 					</div>
-
-
+				</div>
+				<div id="Content03" class="contentItem">
 
 					<hr />
-					<h2>五、星星扩展mod中特殊NPC攻略（实时更新中）:</h2>
+					<h2>一、星星扩展mod中特殊NPC攻略:</h2>
 					<div class="requestTitle" id="request14">
 						1、女侠-风休住。
 					</div>
 					<div class="requestContent" style="" id="request14C">
 						<span class="requestDescription">简介：</span>
-						<div class="">
+						<div class="description">
 							曾是拉盖娅的一个女兵。玩家获得的第一个英雄，战力大概能单挑60劫匪。<br />
 							技能1、给玩家加血（每局的加血触发的最低血量是取10-30的随机数，比如如果随机数是10，则本局血量如果在在5-10之间就会给玩家加血。）。被动技能<br />
 							技能2、招募遇到的劫匪（要求数量比玩家部队士兵数量要少才能够直接招募）。主动技能<br />
 							技能3、每三天招募“女侠”这种士兵自动入队。可与她对话关闭此功能。<br />
+							技能4、能够教给玩家一个保命的技能，自己问她吧。<br />
 							装备特性：斗笠不能更换。（就叫斗笠，星星商店有卖。）<br />
 						</div>
 						<div class="requestSolution">招募：</div>
-						<div id="">
+						<div id="" class="description">
 							去帝国酒馆找她对话，前四句对话完毕之后再此点击即可。时间到了之后再去找她即可招募入队。一定要去酒馆找她，不要在外面的部队找她。她任何时候都会出现在酒馆。另外，酒馆有很多新NPC，特别是波罗斯，你最好多看看。<br />
 						</div>
 					</div>
@@ -428,17 +513,18 @@
 					</div>
 					<div class="requestContent" style="" id="request15C">
 						<span class="requestDescription">简介：</span>
-						<div class="">
+						<div class="description">
 							西帝国的一个农民，具有非凡的军事才能，玩家前期能够获得的一个英雄。<br />
 							技能1、自动寻找食物（游戏中每30小时寻找一次，寻找的食物为新添加的各类食物）。被动技能<br />
 							技能2、遭遇站中如果我方处于弱势能够有机会不损失士兵下撤退。主动技能<br />
 							技能3、能够将主部队15范围内的强盗类型部队增加人数。增加的多少为：(30~300)*部队士兵种类数，十天柯使用一次。主动技能<br />
-							技能4、防止敌方部队撤退(4月29日更新的有小bug)。主动技能<br />
-							装备特性：无。<br />
+							技能4、防止敌方部队撤退(4月29日更新的有小bug，之后的版本已经修复)。主动技能<br />
+							技能5、当他的一号位装备"信无书特制连弩"，二号位装备"信无书特制连弩矢"时，在开战的前40分钟，弩箭无限，且无换弹时间。被动技能<br />
+							装备特性："信无书特制连弩"和"信无书特制连弩矢"不能换，二者能在星星商店买，但是很贵。<br />
 						</div>
 						<div class="requestSolution">招募：</div>
-						<div id="">
-							找女侠对话获取线索，然后去村中找他，按要求执行即可。<br />
+						<div class="description">
+							找女侠对话获取线索，然后去村中找他，按他的要求执行即可。<br />
 						</div>
 					</div>
 
@@ -447,14 +533,14 @@
 					</div>
 					<div class="requestContent" style="" id="request16C">
 						<span class="requestDescription">简介：</span>
-						<div class="">
+						<div class="description">
 							阿耳戈隆的一位医生，心地善良，经常为百姓和士兵治病，但为人低调。<br />
 							技能1、治疗玩家和同伴，治疗的血量随着治疗次数增加而增加，治疗需要消耗纱布和药物。主动技能<br />
-							技能2、需要送她书本才能够快速提升她的医术技能。<br />
+							技能2、需要送她书本才能够快速提升她的医术技能。三种书本能在星星商店买到。<br />
 							装备特性：无。<br />
 						</div>
 						<div class="requestSolution">招募：</div>
-						<div id="">
+						<div class="description">
 							找女侠对话获取线索，然后去城中找他，按要求执行即可。（注意：可能不止一个长得像她的人。她是红头发，名字为“帝国女镇民”），纱布和药物在每个城镇中的酒馆里面可找药店老板购买。给完纱布和药品之后出城等待三天即可。<br />
 						</div>
 					</div>
@@ -464,7 +550,7 @@
 					</div>
 					<div class="requestContent" style="" id="request17C">
 						<span class="requestDescription">简介：</span>
-						<div class="">
+						<div class="description">
 							瓦兰迪亚一个城中的公主，据说已经死了一年多了，这会是真的吗？<br />
 							技能1、加快俘虏招募。注意这会消耗额外的谷物，请确保队伍里面有足够的谷物（大于俘虏数量）才能够有效的加快俘虏招募速度。被动技能<br />
 							技能2、复活一个特殊NPC。主动技能<br />
@@ -472,7 +558,7 @@
 							装备特性：斗篷不能更换。（斗篷名叫索菲娅的等待。星星商店有卖）<br />
 						</div>
 						<div class="requestSolution">招募：</div>
-						<div id="">
+						<div class="description">
 							找信无书对话获取线索，城中百姓一共有5中不同的回答，守卫、男镇民、女镇民、小孩、乞丐。另外“仲春三五日”是指春天15日。因为游戏中春天只有一个月，所以仲春也就是指春天这个月。三五日的话，如果你知道年方二八是指16岁，那为什么会怀疑三五日不是指15日呢？因为从前面的对话能够明显看出是以古汉语的形式来说的，那么这里也需要用古汉语的形式来推测。<br />
 						</div>
 					</div>
@@ -484,14 +570,16 @@
 					</div>
 					<div class="requestContent" style="" id="request18C">
 						<span class="requestDescription">简介：</span>
-						<div class="">
+						<div class="description">
 							斯特吉亚的一位铁匠，斯特吉亚士兵使用的许多强力武器均出自于他之手。<br />
 							技能1、提升部队里面的金属锭等级，每天每个类型限制一个，只有匠神在部队才会生效。被动技能<br />
 							技能2、匠神之锤：其他英雄和玩家拿着匠神之锤会自动将血量降低为1。<br />
-							装备特性：匠神之锤换了对他自己没影响。<br />
+							技能3、万象天引：当匠神血量降低到一半时，触发万象天引技能，将周围30米的敌方单位强制位移到自己周围。<br />
+							技能4、缴械：当匠神血量降低到40%时，触发缴械技能，周围2米范围内的敌方单位将不会对匠神产生有效攻击。<br />
+							装备特性：匠神之锤换了对他自己没影响。不建议给他骑马，他锤子很短，骑马打不到人。<br />
 						</div>
 						<div class="requestSolution">招募：</div>
-						<div id="">
+						<div class="description">
 							找军师对话获取线索。最后给钱的数量不同除了增加的魅力值不同没有其他任何区别。<br />
 						</div>
 					</div>
@@ -508,7 +596,7 @@
 							装备特性：他的马不能换掉。（马名为伯乐之魂，星星商点有卖。）<br />
 						</div>
 						<div class="requestSolution">招募：</div>
-						<div id="">
+						<div class="description">
 							找医生对话获取线索。找到酒馆中的“妇女”对话，找原野时你应该相信村民索所说的话，他确实死了。找原荣时可以在某一个城蹲点，随机到这个城的时候在城中马贩的旁边能找到他。注意有的城没马贩，还有注意他提供的小女孩的线索。（拉齐赫酒馆的小女孩）<br />
 							阿斯凯尔马获取途径：阿塞莱的阿斯凯尔城，或者打阿蒙神，阿蒙神骑的就是阿斯凯尔马。
 							格林托尔矮种马获取途径：巴丹尼亚境内购买。
@@ -525,15 +613,15 @@
 					</div>
 					<div class="requestContent" style="" id="request20C">
 						<span class="requestDescription">简介：</span>
-						<div class="">
+						<div class="description">
 							阿塞莱一个城中的酒馆老板的义女，身世不得而知。<br />
 							技能1、帮助其他特殊英雄。主动技能<br />
 							技能2、超过18岁不会再长大。被动技能<br />
 							装备特性：她的弩不能换掉。（名为山木核桃弩，在星星商店或其他城镇有卖。）<br />
 						</div>
 						<div class="requestSolution">招募：</div>
-						<div id="">
-							找到她后按照提示即可。注意看对话内容！！街道小女孩父亲任务之后，找西卡斯家族任意一个人对话都行。<br />
+						<div class="description">
+							找到她后按照提示即可。注意看对话内容！！接到小女孩父亲任务之后，找西卡斯家族任意一个人对话都行。<br />
 						</div>
 					</div>
 
@@ -542,16 +630,17 @@
 					</div>
 					<div class="requestContent" style="" id="request21C">
 						<span class="requestDescription">简介：</span>
-						<div class="">
+						<div class="description">
 							瓦兰迪亚酒馆中的一个舞女<br />
 							技能1、制作花瓣。被动技能<br />
 							技能2、招募花仙子。被动技能<br />
 							技能3、送给男领主＋50好感。主动技能<br />
 							技能4、玉玉特性：玉玉低于80%可通过小月给她送花。大于80%不能再被送花。玉玉值春每天+1，夏每天+2，秋每天-1，冬每天-2。玉玉值多少需要通过小月查看。<br />
+							花仙子的特性：开战20前20分钟，单次受到200以上伤害才会倒下。<br />
 							装备特性：她头上的花瓣不能换掉。（名为柯凌的花瓣，买不到，需要等春天自己制作）<br />
 						</div>
 						<div class="requestSolution">招募：</div>
-						<div id="">
+						<div class="description">
 							根据公主提示即可。给钱之后在城镇等待一天。<br />
 						</div>
 					</div>
@@ -561,15 +650,15 @@
 					</div>
 					<div class="requestContent" style="" id="request22C">
 						<span class="requestDescription">简介：</span>
-						<div class="">
+						<div class="description">
 							一个巴旦尼亚的竞技场主，但同时也是一位剑术高手，并且人脉广泛。<br />
 							技能1、招募贵族兵，招募花费随着招募次数的增加而逐渐减少。主动技能<br />
 							技能2、提升士兵经验，需要送特定的书籍才能提升增加经验的数量。被动技能<br />
-							技能3、和赛特协同作战。主动技能<br />
+							技能3、和赛特协同作战，协同作战时，二人血量将会同步变化。主动技能<br />
 							装备特性：他的双手剑不能更换。（名为至高王之魂，在星星商店有卖。）<br />
 						</div>
 						<div class="requestSolution">招募：</div>
-						<div id="">
+						<div class="description">
 							根据匠神提示即可。要打的藏身处为10处，侦查技能高更容易发现藏身处。<br />
 						</div>
 					</div>
@@ -579,16 +668,16 @@
 					</div>
 					<div class="requestContent" style="" id="request23C">
 						<span class="requestDescription">简介：</span>
-						<div class="">
+						<div class="description">
 							阿塞莱南部沙漠中的一个强盗首领，是竞技大师的旧相识。<br />
-							技能1、单独带队时招募哈拉米和阿蒙神进入队伍。商队也有效。被动技能<br />
+							技能1、单独带队时招募哈拉米和阿蒙神进入队伍，商队也有效。注意部队士兵小于200时只招募哈拉米，大于200之后才招募阿蒙神，所以建议加点管理统御技能。被动技能<br />
 							技能2、赛特行刑斧，这把斧头玩家拿着且不骑马时有特殊效果。被动技能<br />
 							技能3、赛特战甲：赛特的神装，能在星星商人处买到，有了它的赛特将免疫近战。被动技能<br />
 							技能4、和竞技大师布恩协同作战，前提是穿了赛特战甲且都没骑马。被动技能<br />
 							装备特性：他的双手斧不能更换。（双手斧叫赛特行刑斧，商店没有）。赛特战甲除了他之外，其他人穿着没效果。<br />
 						</div>
 						<div class="requestSolution">招募：</div>
-						<div id="">
+						<div class="description">
 							根据竞技大师布恩提示即可。在阿塞莱南部沙漠你会发现不一样的强盗，击败他们！<br />
 						</div>
 					</div>
@@ -598,14 +687,14 @@
 					</div>
 					<div class="requestContent" style="" id="request24C">
 						<span class="requestDescription">简介：</span>
-						<div class="">
+						<div class="description">
 							西帝国的一位将军，具有非凡的管理才能。<br />
 							技能1、督管城镇时每周提升民兵，并且提升民兵上限到3000，每周增加粮食和治安。被动技能<br />
-							技能2、单独带队时可将公主加入他的队伍，此二人同时带队会有特殊效果（队伍名字会不一样，队伍每天增加两个亡灵士兵）。被动技能<br />
+							技能2、单独带队时与之对话可将公主加入他的队伍，此二人同时带队会有特殊效果（队伍名字会不一样，队伍每天增加两个亡灵士兵）。被动技能<br />
 							装备特性：无。<br />
 						</div>
 						<div class="requestSolution">招募：</div>
-						<div id="">
+						<div class="description">
 							找他本人对话根据提示即可。<br />
 						</div>
 					</div>
@@ -615,7 +704,7 @@
 					</div>
 					<div class="requestContent" style="" id="request25C">
 						<span class="requestDescription">简介：</span>
-						<div class="">
+						<div class="description">
 							时光之城酒馆中一个身穿奇装异服的少女，没人知道她来自哪里，或许这个城镇的名称也与她有关。<br />
 							技能1、咖啡，用于降低英雄的年龄，副作用是增加茱莉亚自身的年龄，比例为5:1。主动技能<br />
 							技能2、城镇之间传送。主动技能<br />
@@ -623,7 +712,7 @@
 							装备特性：无。<br />
 						</div>
 						<div class="requestSolution">招募：</div>
-						<div id="">
+						<div class="description">
 							找他本人对话根据提示即可。<br />
 						</div>
 					</div>
@@ -632,8 +721,8 @@
 					</div>
 					<div class="requestContent" style="" id="request99C">
 						<span class="requestDescription">简介：</span>
-						<div class="">
-							时光之城附属村庄里面一个戴斗笠，背着草叉的人。<br />
+						<div class="description">
+							时光之城附属村庄里面一个戴斗笠，背着草叉的人。（她的作用是：你已经招募过所有英雄，并且希望在新档不重新过招募流程。）<br />
 							要回答的问题答案：（以下问题可能会因为mod版本不同而问题的顺序或者多少有所不同，选择对应问题合适的答案即可。）<br />
 							1、缨是黑色；<br />
 							2、花瓣5色；<br />
@@ -649,7 +738,7 @@
 							12、茱莉亚的传送阵最多标记2处城镇；<br />
 						</div>
 						<div class="requestSolution">招募：</div>
-						<div id="">
+						<div class="description">
 							能招募，但是你必须有一样东西才行。<br />
 						</div>
 					</div>
@@ -658,11 +747,11 @@
 					</div>
 					<div class="requestContent" style="" id="request98C">
 						<span class="requestDescription">简介：</span>
-						<div class="">
+						<div class="description">
 							帕巴斯坦村的一个老妇人，她或许知道原野的下落。<br />
 						</div>
 						<div class="requestSolution">招募：</div>
-						<div id="">
+						<div class="description">
 							对话即可招募<br />
 						</div>
 					</div>
@@ -671,16 +760,41 @@
 					</div>
 					<div class="requestContent" style="" id="request97C">
 						<span class="requestDescription">简介：</span>
-						<div class="">
+						<div class="description">
 							如果玩家没和风休住结婚，且玩家已经和其他人结婚，风休住就会自己找对象。<br />
 						</div>
 						<div class="requestSolution">招募：</div>
-						<div id="">
+						<div class="description">
 							条件符合自动入队<br />
 						</div>
 					</div>
 
-
+					<div class="requestTitle" id="request96">
+						16、杜望。
+					</div>
+					<div class="requestContent" style="" id="request97C">
+						<span class="requestDescription">简介：</span>
+						<div class="description">
+							撤退点的一个猎人。<br />
+						</div>
+						<div class="requestSolution">招募：</div>
+						<div class="description">
+							条件符合对话即可入队<br />
+						</div>
+					</div>
+					<div class="requestTitle" id="request95">
+						17、拉达哥斯。
+					</div>
+					<div class="requestContent" style="" id="request97C">
+						<span class="requestDescription">简介：</span>
+						<div class="description">
+							玩家的老熟人了，这一次是选择报仇还是让他入伙？<br />
+						</div>
+						<div class="requestSolution">招募：</div>
+						<div class="description">
+							在阿耳戈隆城中。<br />
+						</div>
+					</div>
 
 
 
@@ -711,18 +825,18 @@
 
 
 					<hr />
-					<h2>六、星星扩展mod中兵种攻略:</h2>
+					<h2>二、星星扩展mod中兵种攻略:</h2>
 
 					<div class="requestTitle" id="request50">
 						1、八个国家的亲卫。
 					</div>
 					<div class="requestContent" style="" id="request50C">
 						<span class="requestDescription">简介：</span>
-						<div class="">
+						<div class="description">
 							八个国家的第一任皇帝的亲卫，名称都带有这个皇帝的名字。这类兵种只会出现在对应的皇帝的部队中，如果这个皇帝去世，那这个兵种将再也不会出现。<br />
 						</div>
 						<div class="requestSolution">招募：</div>
-						<div id="">
+						<div class="description">
 							只能通过俘虏的方式招募。<br />
 						</div>
 					</div>
@@ -732,11 +846,11 @@
 					</div>
 					<div class="requestContent" style="" id="request51C">
 						<span class="requestDescription">简介：</span>
-						<div class="">
+						<div class="description">
 							山贼或绿林强盗的野外部队或者藏身处会刷新瓦兰迪亚学者。<br />
 						</div>
 						<div class="requestSolution">招募：</div>
-						<div id="">
+						<div class="description">
 							只能通过俘虏的方式招募。<br />
 						</div>
 					</div>
@@ -746,11 +860,11 @@
 					</div>
 					<div class="requestContent" style="" id="request52C">
 						<span class="requestDescription">简介：</span>
-						<div class="">
+						<div class="description">
 							在各个国家的领主部队中会刷新少量，在神秘人部队中也有极低的概率刷新。神秘人刷新后可使用军师的打草惊蛇技能来增加数量。<br />
 						</div>
 						<div class="requestSolution">招募：</div>
-						<div id="">
+						<div class="description">
 							只能通过俘虏的方式招募。<br />
 						</div>
 					</div>
@@ -760,11 +874,11 @@
 					</div>
 					<div class="requestContent" style="" id="request53C">
 						<span class="requestDescription">简介：</span>
-						<div class="">
+						<div class="description">
 							由特殊NPC中的柯凌在春天招募，如果柯凌在队伍，花仙子必须单次承受200以上伤害才会倒下（这个效果最多持续20分钟）。花仙子是非常强力的弓箭手。<br />
 						</div>
 						<div class="requestSolution">招募：</div>
-						<div id="">
+						<div class="description">
 							只能通过柯凌招募，数量有限，不会在神秘人刷新。<br />
 						</div>
 					</div>
@@ -775,11 +889,11 @@
 					</div>
 					<div class="requestContent" style="" id="request54C">
 						<span class="requestDescription">简介：</span>
-						<div class="">
+						<div class="description">
 							斯特吉亚的六级兵中的一个分支，火炮大师有友军伤害，用得好很厉害，用不好会总是杀自己人。<br />
 						</div>
 						<div class="requestSolution">招募：</div>
-						<div id="">
+						<div class="description">
 							斯特吉亚贵族兵升级得到。<br />
 						</div>
 					</div>
@@ -787,15 +901,15 @@
 
 
 					<div class="requestTitle" id="request55">
-						6、荒野精灵。
+						6、荒野精灵、凌云行者。
 					</div>
 					<div class="requestContent" style="" id="request55C">
 						<span class="requestDescription">简介：</span>
-						<div class="">
-							酒馆中的流落少女升级而来的，强力的弓骑。<br />
+						<div class="description">
+							酒馆中的流落少女升级而来的，强力的弓骑和骑兵。<br />
 						</div>
 						<div class="requestSolution">招募：</div>
-						<div id="">
+						<div class="description">
 							通过酒馆的流落少女招募而得到。<br />
 						</div>
 					</div>
@@ -806,11 +920,11 @@
 					</div>
 					<div class="requestContent" style="" id="request56C">
 						<span class="requestDescription">简介：</span>
-						<div class="">
+						<div class="description">
 							以长棍为武器的少年，战力不俗。<br />
 						</div>
 						<div class="requestSolution">招募：</div>
-						<div id="">
+						<div class="description">
 							俘虏流民小孩升级而来。<br />
 						</div>
 					</div>
@@ -820,11 +934,11 @@
 					</div>
 					<div class="requestContent" style="" id="request57C">
 						<span class="requestDescription">简介：</span>
-						<div class="">
+						<div class="description">
 							雇佣兵，战力不俗<br />
 						</div>
 						<div class="requestSolution">招募：</div>
-						<div id="">
+						<div class="description">
 							在酒馆招募雇佣兵或者俘虏小阵营的部队。<br />
 						</div>
 					</div>
@@ -836,11 +950,11 @@
 					</div>
 					<div class="requestContent" style="" id="request58C">
 						<span class="requestDescription">简介：</span>
-						<div class="">
+						<div class="description">
 							女侠-风休住招募的士兵升级而来，战力普通，但前期能够免费获得的骑兵。<br />
 						</div>
 						<div class="requestSolution">招募：</div>
-						<div id="">
+						<div class="description">
 							风休住招募入队，可通过对话禁用此功能。<br />
 						</div>
 					</div>
@@ -853,18 +967,18 @@
 
 
 					<hr />
-					<h2>七、星星扩展mod中物品攻略:</h2>
+					<h2>三、星星扩展mod中物品攻略:</h2>
 
 					<div class="requestTitle" id="request70">
 						1、王凯莉的信。
 					</div>
 					<div class="requestContent" style="" id="request70C">
 						<span class="requestDescription">简介：</span>
-						<div class="">
+						<div class="description">
 							信的内容是：朋友你好！我叫王凯莉，是这个mod的作者，也是风休住的朋友，你或许现在还不知道风休住是谁，但你应该会很快知道的。很高兴你下载这个mod，接下来我将会对这个mod做一个简要的介绍。这个mod增加了一些新的装备和物品，新的兵种和伙伴，还增加了军营，以供将士们休息之用，还新增了一些特殊机制，这里我不过多赘述了，如果想了解更多内容，你可以在你下载此mod的地方找到更多信息。我知道你已经迫不及待的想要我赶快结束这封信，但是我不得不提的是，我们朋友们，你也会很快认识他们，他们将会给你带来真正巨大的帮助，但是他们并不会轻易的加入你的部队，就好像天上的星星，需要很高很高的梯子才能够爬上去摘到，你也需要付出一定的耐心与时间才能够获得他们的信任。最后，我其实并不是很擅长写信，感谢你能够花时间看完它，你可以将这封信卖掉作为你的第一笔资金，也可以将它留下以备不时之需，但是这封信将不会影响后面的剧情，你不必为此担心。最后的最后，我已经告诉我的朋友风休住将会有人来找她，她就在酒馆里面，但是她也有自己的事情需要忙，我不确定她什么时候才能够加入你的部队。好了，开始你的旅程吧，我的朋友！哦，还有一件事，有发现bug记得回信给我哦，我的邮箱d_22664434@outlook.com。<br />
 						</div>
 						<div class="requestSolution">获得：</div>
-						<div id="">
+						<div class="description">
 							开新档的第二天自动获得。<br />
 						</div>
 					</div>
@@ -874,11 +988,11 @@
 					</div>
 					<div class="requestContent" style="" id="request71C">
 						<span class="requestDescription">简介：</span>
-						<div class="">
+						<div class="description">
 							大部分书籍玩家不能使用，只能作为商品，有6本书是用来送给医生和竞技大师的，这6本书能在酒馆的星星商人那里买到。<br />
 						</div>
 						<div class="requestSolution">获得：</div>
-						<div id="">
+						<div class="description">
 							酒馆的星星商人处购买。<br />
 						</div>
 					</div>
@@ -890,11 +1004,11 @@
 					</div>
 					<div class="requestContent" style="" id="request72C">
 						<span class="requestDescription">简介：</span>
-						<div class="">
+						<div class="description">
 							这些物品大多能在星星商人处买到，价格太高的不建议购买。<br />
 						</div>
 						<div class="requestSolution">获得：</div>
-						<div id="">
+						<div class="description">
 							酒馆的星星商人处购买。<br />
 						</div>
 					</div>
@@ -904,11 +1018,11 @@
 					</div>
 					<div class="requestContent" style="" id="request73C">
 						<span class="requestDescription">简介：</span>
-						<div class="">
+						<div class="description">
 							赛特的专属战甲与赛特的专属武器。前者可在星星商人处买到，后者买不到，且是赛特自带的武器。赛特行刑斧玩家可以使用，且由特殊技能。如果赛特单独带队且没有参与玩家的战斗，玩家换了他的武器将不会有任何影响。<br />
 						</div>
 						<div class="requestSolution">获得：</div>
-						<div id="">
+						<div class="description">
 							略<br />
 						</div>
 					</div>
@@ -917,18 +1031,18 @@
 
 
 					<hr />
-					<h2>八、星星扩展mod中大地图部队攻略:</h2>
+					<h2>四、星星扩展mod中大地图部队攻略:</h2>
 
 					<div class="requestTitle" id="request100">
 						1、赛特的爪牙。
 					</div>
 					<div class="requestContent" style="" id="request100C">
 						<span class="requestDescription">简介：</span>
-						<div class="">
+						<div class="description">
 							和竞技大师获得赛特的线索后会在阿塞莱境内刷新赛特的爪牙的部队，部队刷新出来之后会随着时间增加人数，如果玩家实力较弱，建议寻找人数较少的部队攻击。<br />
 						</div>
 						<div class="requestSolution">刷新：</div>
-						<div id="">
+						<div class="description">
 							地图南部区域，与竞技大师获得赛特的线索之后才刷新。<br />
 						</div>
 					</div>
@@ -938,18 +1052,19 @@
 					</div>
 					<div class="requestContent" style="" id="request101C">
 						<span class="requestDescription">简介：</span>
-						<div class="">
+						<div class="description">
 							单人部队，在开档7天之后会有概率出现所有新添加的士兵，包括力神，但是不包括花仙子。<br />
 						</div>
 						<div class="requestSolution">刷新：</div>
-						<div id="">
+						<div class="description">
 							地图所有位置，新档开档7天后才会随机生成其他部队。<br />
 						</div>
 					</div>
 
-
+				</div>
+				<div id="Content04" class="contentItem">
 					<hr />
-					<h2>九、更新日志:</h2>
+					<h2>一、更新日志:</h2>
 
 					<div class="requestTitle" id="request120">
 						4月13日。
@@ -1109,7 +1224,7 @@
 
 
 					<div class="requestTitle" id="request125">
-						5月7日。（最后一次更新）
+						5月7日。
 					</div>
 					<div class="requestContent" style="" id="request125C">
 						<span class="requestDescription">内容：</span>
@@ -1146,33 +1261,94 @@
 						</textarea>
 					</div>
 
-
-
-
-
-
-
-
-
+<div class="requestTitle" id="request126">
+						5月19日。（最后一次更新）
+					</div>
+					<div class="requestContent" style="" id="request126C">
+						<span class="requestDescription">内容：</span>
+						<textarea rows="20" cols="130">
+不需开新档。
+加强了雨亦奇的治疗能力，现在不需要在定居点就能够治疗，且治疗的英雄不限于12个特殊英雄。（这样即使在野外受伤也能快速恢复战力）
+竞技大师新增技能：人脉。这个技能能让玩家一键认识所有领主，在百科中不再是显示黑色。
+匠神新增被动技能：缴械，血量低于400时，将对2米范围内的所有地方单位触发缴械效果（敌方单位无法正常攻击）。
+匠神新增被动技能：万象天引（没错，技能名称我是抄袭的。），血量低于500时，将30米范围内的所有地方单位强制位移到身边。
+赛特技能加强：赛特战甲持续时间由原来的10分钟变为无限。
+布恩与赛特协同作战时：两人的血量将同步变化。
+索菲娅新增技能：灵魂互换，玩家在战场上能够和索菲娅进行灵魂的互换，但是前提是玩家本身还活着。互换的效果是玩家能够操作索菲娅战斗，快捷键为N。
+信无书关门捉贼技能快捷键修改：由原来的E改为C键。
+玩家新增技能：神罗天征，将玩家一定范围内的敌人强制位移到范围之外。3分钟CD。击退移动的具体范围于玩家等级有关。使用方法问小风。
+新增身甲：蜗牛壳。嗯虽然这个名字很奇特，但是这个身甲具有特殊功能。玩家在穿这件身甲战斗时可以按E键触发短暂无敌效果，有CD。
+新增头盔：水泥盔。这是一个烦人的家伙，因为你穿上它的时候你在战场的血量上限会随机到10至300。
+新增护腿：*腿。自己去看吧，这个护腿的属性每天都会变化。
+新增荒野精灵同级骑兵。
+新增群友NPC都在泽翁尼卡酒馆。
+新增可招募的拉达哥斯，如果正常过剧情，会在找雨亦奇的时候在阿耳戈隆碰到。已经招募雨亦奇了也能再去找到。
+加强朗瓦德的铁腕
+						</textarea>
+					</div>
 				</div>
 
+			</div>
+			<div id="Content05" class="contentItem">
+				<div id="download" class="contentBigText">
+					百度云下载：星星扩展3.2.2【对应游戏版本1.1.2-1.1.4】<a href="https://pan.baidu.com/s/18SGXFZqlEKNz48Pan6qUNg">下载</a> 。提取码1111<br />
+				</div>
+			</div>
+
+
+			<div id="Content06" class="contentItem">
+				<div id="download" class="contentBigText">
+					MOD的QQ交流群：668458061;<br />
+					作者邮箱：2754422056@qq.com;
+				</div>
 			</div>
 		</div>
 
 
 
 		<script type="text/javascript">
-			let requestTitles = document.querySelectorAll(".requestTitle")
-			for (let i = 0; i < requestTitles.length; i++) {
-				requestTitles[i].addEventListener('click', function() {
-					let requestContent = document.querySelector(`#${requestTitles[i].id}C`)
-					if (requestContent != undefined && requestContent.style.display === "none") {
-						requestContent.style.display = 'block';
-					} else {
-						requestContent.style.display = 'none';
+			let navItemBoxes = document.querySelectorAll(".navItemBox")
+			let contentItems = document.querySelectorAll(".contentItem")
+
+			for (let i of navItemBoxes) {
+				if (i.id == "navItem03") {
+					i.style.backgroundColor = "#aaaaff";
+				}
+				for (let m of contentItems) {
+					if (m.id == "Content03") {
+						m.style.display = "block";
+					}
+				}
+			}
+
+			for (let i of navItemBoxes) {
+				i.addEventListener('click', function() {
+					for (let k of navItemBoxes) {
+						if (k.id != i.id) {
+							k.style.backgroundColor = "#ffffff";
+						}
+					}
+					i.style.backgroundColor = "#aaaaff";
+					
+					for (let m of contentItems) {
+						if (m.id == `Content${i.id.split("m")[1]}`) {
+							m.style.display = "block";
+						}else{
+							m.style.display = "none";
+						}
 					}
 				})
 			}
+			// for (let i = 0; i < requestTitles.length; i++) {
+			// 	requestTitles[i].addEventListener('click', function() {
+			// 		let requestContent = document.querySelector(`#${requestTitles[i].id}C`)
+			// 		if (requestContent != undefined && requestContent.style.display === "none") {
+			// 			requestContent.style.display = 'block';
+			// 		} else {
+			// 			requestContent.style.display = 'none';
+			// 		}
+			// 	})
+			// }
 		</script>
 	</body>
 </html>
